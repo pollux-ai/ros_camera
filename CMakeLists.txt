@@ -8,7 +8,7 @@ project(ros_camera)
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
 find_package(catkin REQUIRED COMPONENTS
-  roscpp
+  cv_bridge  
   rospy
   std_msgs
   sensor_msgs
@@ -16,8 +16,8 @@ find_package(catkin REQUIRED COMPONENTS
 
 ## System dependencies are found with CMake's conventions
 # find_package(Boost REQUIRED COMPONENTS system)
-find_package(jetson-utils REQUIRED)
-find_package(CUDA REQUIRED)
+
+find_package(OpenCV REQUIRED)
 
 ## Uncomment this if the package has a setup.py. This macro ensures
 ## modules and global scripts declared therein get installed
@@ -107,7 +107,7 @@ find_package(CUDA REQUIRED)
 catkin_package(
 #  INCLUDE_DIRS include
 #  LIBRARIES jetbot_ros
-#  CATKIN_DEPENDS roscpp rospy std_msgs
+  CATKIN_DEPENDS cv_bridge opencv2 rospy sensor_msgs std_msgs
 #  DEPENDS system_lib
 )
 
@@ -120,16 +120,14 @@ catkin_package(
 include_directories(
 # include
   ${catkin_INCLUDE_DIRS}
-  ${CUDA_INCLUDE_DIRS}
+  ${OpenCV_INCLUDE_DIRS}
 )
 
 include_directories(/usr/include/gstreamer-1.0 /usr/include/glib-2.0 /usr/include/libxml2 /usr/lib/aarch64-linux-gnu/gstreamer-1.0/include /usr/lib/x86_64-linux-gnu/gstreamer-1.0/include/ /usr/lib/aarch64-linux-gnu/glib-2.0/include/ /usr/lib/x86_64-linux-gnu/glib-2.0/include/)
-link_directories(/usr/lib/aarch64-linux-gnu/tegra)
 add_definitions(-DROS1)
 
 # camera node
-add_executable(jetbot_camera src/jetbot_camera.cpp src/image_converter.cpp src/ros_compat.cpp)
-target_link_libraries(jetbot_camera ${catkin_LIBRARIES} jetson-utils)
+
 
 ## Declare a C++ library
 # add_library(${PROJECT_NAME}
