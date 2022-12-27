@@ -1,5 +1,7 @@
 #!/usr/bin/env python
 
+##from https://github.com/NamWoo
+
 from __future__ import print_function
 #import roslib
 #roslib.load_manifest('my_package')
@@ -11,16 +13,17 @@ from std_msgs.msg import String
 from sensor_msgs.msg import Image
 from cv_bridge import CvBridge, CvBridgeError
 
-# from dec_line import *
+from line_functions import *
 
 
 class image_converter:
-
     def __init__(self):
     # self.image_pub = rospy.Publisher("image_topic_2",Image)
+        ros_topic = "rgb"
         self.bridge = CvBridge()
-        self.image_sub = rospy.Subscriber("rgb", Image, self.callback)
+        self.image_sub = rospy.Subscriber(ros_topic, Image, self.callback)
         cv2.namedWindow("output", cv2.WINDOW_GUI_EXPANDED)
+        rospy.loginfo("ros camera : %s", ros_topic)
 
     def callback(self,data):
         try:
@@ -28,7 +31,7 @@ class image_converter:
         except CvBridgeError as e:
             print(e)
 
-        # cv_image = joo_line(cv_image)
+        cv_image = line_dectecting(cv_image)
         
         cv2.imshow("output", cv_image)
         cv2.waitKey(3)
