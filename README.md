@@ -1,8 +1,5 @@
 # ros_camera
 
-Camera 를 python - opencv 또는 c++ - opencv로 불러와 ros topic 으로 보내는 기본 구성 코드를 정리한다.*(자꾸 까먹어서 repo를 새로 박아놓자;;)*
-
-범용 코드를 위해 최대한 뺄꺼 빼고 만들어놓자.
 
 
 ||x86-64|jetson|docker|
