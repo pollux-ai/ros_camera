@@ -1,0 +1,63 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/nw/catkin_ws/devel/include/**",
+        "/opt/ros/melodic/include/**",
+        "/home/nw/catkin_ws/src/ros_controllers/ackermann_steering_controller/include/**",
+        "/home/nw/catkin_ws/src/navigation/amcl/include/**",
+        "/home/nw/catkin_ws/src/navigation/base_local_planner/include/**",
+        "/home/nw/catkin_ws/src/navigation/carrot_planner/include/**",
+        "/home/nw/catkin_ws/src/navigation/clear_costmap_recovery/include/**",
+        "/home/nw/catkin_ws/src/navigation/costmap_2d/include/**",
+        "/home/nw/catkin_ws/src/darknet_ros/darknet_ros/include/**",
+        "/home/nw/catkin_ws/src/ros_controllers/diff_drive_controller/include/**",
+        "/home/nw/catkin_ws/src/navigation/dwa_local_planner/include/**",
+        "/home/nw/catkin_ws/src/ros_controllers/effort_controllers/include/**",
+        "/home/nw/catkin_ws/src/ex_urdf/include/**",
+        "/home/nw/catkin_ws/src/ros_controllers/force_torque_sensor_controller/include/**",
+        "/home/nw/catkin_ws/src/ros_controllers/forward_command_controller/include/**",
+        "/home/nw/catkin_ws/src/navigation/global_planner/include/**",
+        "/home/nw/catkin_ws/src/ros_controllers/gripper_action_controller/include/**",
+        "/home/nw/catkin_ws/src/ros_controllers/imu_sensor_controller/include/**",
+        "/home/nw/catkin_ws/src/ros_controllers/joint_state_controller/include/**",
+        "/home/nw/catkin_ws/src/ros_controllers/joint_trajectory_controller/include/**",
+        "/home/nw/catkin_ws/src/katana_driver/katana/include/**",
+        "/home/nw/catkin_ws/src/katana_driver/katana_gazebo_plugins/include/**",
+        "/home/nw/catkin_ws/src/katana_driver/katana_moveit_ikfast_plugin/include/**",
+        "/home/nw/catkin_ws/src/katana_driver/katana_teleop/include/**",
+        "/home/nw/catkin_ws/src/katana_driver/katana_tutorials/include/**",
+        "/home/nw/catkin_ws/src/navigation/map_server/include/**",
+        "/home/nw/catkin_ws/src/navigation/move_base/include/**",
+        "/home/nw/catkin_ws/src/navigation/move_slow_and_clear/include/**",
+        "/home/nw/catkin_ws/src/navigation/nav_core/include/**",
+        "/home/nw/catkin_ws/src/navigation/navfn/include/**",
+        "/home/nw/catkin_ws/src/ros_controllers/position_controllers/include/**",
+        "/home/nw/catkin_ws/src/navigation/rotate_recovery/include/**",
+        "/home/nw/catkin_ws/src/geometry2/tf2/include/**",
+        "/home/nw/catkin_ws/src/geometry2/tf2_bullet/include/**",
+        "/home/nw/catkin_ws/src/geometry2/tf2_eigen/include/**",
+        "/home/nw/catkin_ws/src/geometry2/tf2_geometry_msgs/include/**",
+        "/home/nw/catkin_ws/src/geometry2/tf2_kdl/include/**",
+        "/home/nw/catkin_ws/src/geometry2/tf2_msgs/include/**",
+        "/home/nw/catkin_ws/src/geometry2/tf2_ros/include/**",
+        "/home/nw/catkin_ws/src/geometry2/tf2_sensor_msgs/include/**",
+        "/home/nw/catkin_ws/src/turtlebot3_simulations/turtlebot3_fake/include/**",
+        "/home/nw/catkin_ws/src/turtlebot3_simulations/turtlebot3_gazebo/include/**",
+        "/home/nw/catkin_ws/src/ros_controllers/velocity_controllers/include/**",
+        "/home/nw/catkin_ws/src/navigation/voxel_grid/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}
